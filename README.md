@@ -28,7 +28,60 @@ After cleaning, our dataset includes 368,668 individuals and 381,907 unique stay
 
 ### Large Networks
 #### Movement
-Analyzing the movement network, we see that the nodes with the highest in-degrees are Florence Staging Facility (20,998), Port Isabel Service Processing Center (19,877), and Adams County Correctional Center (16,639). This means that these detention facilities have the highest rate of detention movements going into them. One reason for this, is that many of these detention facilities transfer to themselves. Removing the "loops" in the graph, we see that the nodes with the highest in-degrees are Florence Staging Facility (18,884), Adams County Correctional Center (16,565), and Otay Mesa Detention Center (15,436).
+Analyzing the movement network, we see that the nodes with the highest in-degrees are Florence Staging Facility (20,998), Port Isabel Service Processing Center (19,877), and Adams County Correctional Center (16,639). This means that these detention facilities have the highest rate of detention movements going into them. One reason for this, is that many of these detention facilities transfer to themselves. Removing the "loops" in the graph, we see that the nodes with the highest in-degrees are Florence Staging Facility (18,884), Adams County Correctional Center (16,565), and Otay Mesa Detention Center (15,436). The nodes with the highest out degree (removing loops) are Alexandria Staging Facility (39,886), Pine Prairie ICE Processing Center (18,251), and Florida Service Processing Center (14,796). This means that these detention facilities move the most people to other detention facilities. Finally, the nodes with the highest total degrees (moving people in and out) are Alexandria Staging Facility (48,867), Florence Staging Facility (30,080), and Pine Prairie ICE Processing Center (29,083). You can find the detention facilities with the top fifty degrees below. 
+
+|facility|in_degree|out_degree|total_degree|
+|---|---|---|---|
+|ALEXANDRIA STAGING FACILITY|9031|39836|48867|
+|FLORENCE STAGING FACILITY|18884|11196|30080|
+|PINE PRAIRIE ICE PROCESSING CENTER|10875|18208|29083|
+|ADAMS COUNTY DET CENTER|16565|11638|28203|
+|FLORENCE SPC|12435|14609|27044|
+|STEWART DETENTION CENTER|5813|11928|17741|
+|OTAY MESA DETENTION CENTER|15436|1231|16667|
+|JACKSON PARISH CORRECTIONAL CENTER|4552|12012|16564|
+|PRAIRIELAND DETENTION CENTER|4494|12008|16502|
+|WINN CORRECTIONAL CENTER|4435|11324|15759|
+|MONTGOMERY PROCESSING CTR|3981|10691|14672|
+|CENTRAL LOUISIANA ICE PROC CTR|4658|9970|14628|
+|JOE CORLEY PROCESSING CTR|6410|6832|13242|
+|PORT ISABEL SPC|9537|3675|13212|
+|ELOY FED CTR FACILITY (CORE CIVIC)|10413|2395|12808|
+|AZ REM OP COORD CENTER (AROCC)|5913|5837|11750|
+|KROME HOLD ROOM|6290|4917|11207|
+|MONTGOMERY HOLD RM|10305|682|10987|
+|MOSHANNON VALLEY PROCESSING CENTER|4434|5804|10238|
+|MIAMI STAGING FACILITY|3291|6491|9782|
+|KROME NORTH SPC|5197|4520|9717|
+|IAH SECURE ADULT DET. FACILITY|4509|5195|9704|
+|DALLAS F.O. HOLD|6510|2720|9230|
+|SOUTH TEXAS ICE PROCESSING CENTER|2317|6887|9204|
+|BROWARD TRANSITIONAL CENTER|2877|6100|8977|
+|FOLKSTON MAIN IPC|3101|5666|8767|
+|SOUTH LOUISIANA ICE PROC CTR|934|7676|8610|
+|RICHWOOD COR CENTER|1669|6204|7873|
+|BLUEBONNET DET FCLTY|3130|4716|7846|
+|ELIZABETH CONTRACT D.F.|4182|2945|7127|
+|HOUSTON CONTRACT DET.FAC.|2614|4385|6999|
+|EL PASO SPC|3840|2226|6066|
+|KARNES CO IMMIGRATION PROCESS CTR|3617|2321|5938|
+|PICKENS COUNTY DET CTR|4400|1482|5882|
+|CCA, FLORENCE CORRECTIONAL CENTER|2795|2811|5606|
+|BROADVIEW SERVICE STAGING|2263|3341|5604|
+|CLAY COUNTY JUSTICE CENTER|2503|3037|5540|
+|ATLANTA DIST. HOLD RM|3316|1852|5168|
+|DENVER CONTRACT DETENTION FACILITY|1217|3927|5144|
+|River Correctional Center|1700|3279|4979|
+|DESERT VIEW ANNEX|1949|2502|4451|
+|RICHMOND SUB-OFFICE HOLD|2189|2215|4404|
+|SAN LUIS REGIONAL DET CENTER|3475|692|4167|
+|PHOENIX DIST OFFICE|3404|748|4152|
+|OTERO CO PROCESSING CENTER|2852|1079|3931|
+|ALAMANCE CO. DET. FACILITY|1961|1839|3800|
+|FARMVILLE DETENTION CENTER|1585|2147|3732|
+|NW ICE PROCESSING CTR|1016|2691|3707|
+|FOLKSTON ANNEX IPC|1152|2485|3637|
+|EL VALLE DETENTION FACILITY|2123|1393|3516|
 
 #### Transfer
 
