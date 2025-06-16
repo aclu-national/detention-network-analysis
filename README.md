@@ -7,7 +7,7 @@ This study applies network analysis methodologies to the examination of detainee
 ## Introduction
 The immigration detention system comprises a complex network of facilities that hold individuals under custody. Understanding the movement dynamics between these facilities is critical for holding them accountable - particularly as many are forced into a "Blackhole" of detention. This research leverages network analysis techniques to explore detainee "movements"—defined as changes in facility bookings within a single detention episode—and to identify systemic patterns and facility roles.
 
-## Data  
+## Data & Methods
 To construct the immigration detention network, we first downloaded detention data spanning mid-November 2024 to mid-February 2025 from the Deportation Data Project. The full cleaning process is documented in `analysis.R`. Key steps include:  
 1. Removing invalid unique identifiers.  
 2. Creating a combined stay/unique identifier variable.  
