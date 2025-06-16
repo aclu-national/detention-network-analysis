@@ -64,7 +64,28 @@ Analysis of detainee pathways reveals distinct functional roles among detention 
 |STEWART DETENTION CENTER|8.57%|36.15%|55.29%|
 |OTAY MESA DETENTION CENTER|91.92%|3.96%|4.13%|
 
-We can also look at the most common subpaths. Above, we looked at what ..
+We can also look at the most common paths and subpaths through immigration detention networks. The most common individual paths include from Port Isabel Service Processing Center to itself (7,434), Montgomery Holding Room to Montgomery Holding Center (6,853), and Dallas Field Office Holding Room to Praireland Detention Center (2,480). Many of the most common individual paths are either from the facility to itself or from a holding room to the detention facility. 
+
+Looking at the most common subpaths through immigration detention we see that the most common subpaths of length 2 (i.e, between two detention facilities in a single stay) are, similar to above, Florence Staging Facility to Florence Service Processing Center (12,802), Port Isabel Service Processing Center to itself (10,340), and Montgomery Holding Room to Montgomery Holding Center (9,980). Looking at most common subpaths of length 3 (i.e, between two detention facilities with a third in the middle) are Florence Staging Facility to Florence Service Processing Center to Folkston ICE Processing Center (Main) (1,905), Dallas County Jail Lew Sterrett to Dallas Field Office Holding Room to Praireland Detention Center (1,457), and Florence Staging Facility to Florence Service Processing Center and back to Florence Staging Facility, a loop (1,405). You can find the most common subpaths of length 4, 5, and 6 below. 
+
+|Subpaths| Count | Subpath Length |
+|---|---|---|
+|PHOENIX DIST OFFICE->FLORENCE STAGING FACILITY->FLORENCE STAGING FACILITY->CCA, FLORENCE CORRECTIONAL CENTER|488|4|
+|FLORENCE STAGING FACILITY->FLORENCE SPC->PINE PRAIRIE ICE PROCESSING CENTER->ALEXANDRIA STAGING FACILITY|476|4|
+|FLORENCE STAGING FACILITY->FLORENCE STAGING FACILITY->CCA, FLORENCE CORRECTIONAL CENTER->FLORENCE STAGING FACILITY|431|4|
+|FLORENCE STAGING FACILITY->FLORENCE SPC->FOLKSTON MAIN IPC->STEWART DETENTION CENTER|407|4|
+|KNOXVILLE HOLD ROOM->KNOX COUNTY DETENTION FACILITY->PICKENS COUNTY DET CTR->CENTRAL LOUISIANA ICE PROC CTR|401|4|
+|PHOENIX DIST OFFICE->FLORENCE STAGING FACILITY->FLORENCE STAGING FACILITY->CCA, FLORENCE CORRECTIONAL CENTER->FLORENCE STAGING FACILITY|233|5|
+|PORT ISABEL SPC->PORT ISABEL SPC->SOUTH TEXAS ICE PROCESSING CENTER->PORT ISABEL SPC->PORT ISABEL SPC|197|5|
+|PORT ISABEL SPC->PORT ISABEL SPC->RIO GRANDE DETENTION CENTER->PORT ISABEL SPC->PORT ISABEL SPC|178|5|
+|PHOENIX DIST OFFICE->FLORENCE STAGING FACILITY->FLORENCE STAGING FACILITY->CCA, FLORENCE CORRECTIONAL CENTER->FLORENCE SPC|153|5|
+|DALLAS COUNTY JAIL-LEW STERRETT->DALLAS F.O. HOLD->BLUEBONNET DET FCLTY->PRAIRIELAND DETENTION CENTER->ALEXANDRIA STAGING FACILITY|144|5|
+|ORLANDO HOLD ROOM->ORANGE COUNTY JAIL->ORLANDO HOLD ROOM->BAKER COUNTY SHERIFF DEPT.->KROME HOLD ROOM->MIAMI STAGING FACILITY|55|6|
+|MOSHANNON VALLEY PROCESSING CENTER->PINE PRAIRIE ICE PROCESSING CENTER->ALEXANDRIA STAGING FACILITY->KROME/MIAMI HUB->KROME NORTH SPC->MIAMI STAGING FACILITY|45|6|
+|ORLANDO HOLD ROOM->BAKER COUNTY SHERIFF DEPT.->KROME HOLD ROOM->MIAMI STAGING FACILITY->PINE PRAIRIE ICE PROCESSING CENTER->ALEXANDRIA STAGING FACILITY|42|6|
+|KROME NORTH SPC->MIAMI STAGING FACILITY->EL VALLE DETENTION FACILITY->FLORENCE STAGING FACILITY->FLORENCE SPC->NW ICE PROCESSING CTR|37|6|
+|PHOENIX DIST OFFICE->FLORENCE STAGING FACILITY->PHOENIX DIST OFFICE->FLORENCE STAGING FACILITY->PHOENIX DIST OFFICE->FLORENCE STAGING FACILITY|37|6|
+
 
 ## Discussion
 Analyzing the paths of immigration detention, we can see what role each detention facility plays in the detention process. For example, some are primarily for deportation, whereas others are pathways between detention facilities. We can quantify this for each detention facicility by looking at stays that involve at least two detention facilities and looking at the proportion of detentions that are someone's first detention, a pathway before their last detention, and their last detention. 
