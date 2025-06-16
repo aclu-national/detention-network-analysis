@@ -18,46 +18,22 @@ We constructed two distinct networks: a broad `movement` network and a more spec
 
 Using facility pairs (origin and destination), we created two directed graphs representing facility-to-facility transfers. Each graph includes all 619 detention facilities as nodes, with edges weighted by the frequency of transfers between them. 
 
-### Individual Networks  
+### Paths  
 Beyond aggregate networks, we mapped the detention pathway of each individual stay. For each stay, we generated a graph tracing their sequence of detention facilities—from the initial facility, through intermediate stops, to the final facility.
 
 ## Analysis
 
 ### Overview
-After cleaning, our dataset includes 368,668 individuals and 381,907 unique stays. *Note that one person may have multiple unique stays*. On average, each stay involves 2.00 detention events (book-ins). Additionally, detention release reasons vary: across the 763,286 detention events, the most common reason is `Transferred` (386,645 occurrences), followed by `Removed` (193,947), and then `NA` (42,418), which typically indicates ongoing cases. Other reasons are less frequent and detailed below.
-
-|Detention Release Reason| Count | Percent | Valid Percent|
-|---|---|---|---|
-|Transferred|386645|0.506553244786358|0.536360332266101|
-|Removed|193947|0.254094795397793|0.269046482851229|
-|NA|42418|0.0555728783182189|NA|
-|Paroled|41920|0.0549204361143791|0.0581521166149697|
-|Order of recognizance|23834|0.0312255170407947|0.0330629185925856|
-|Paroled - Fear Found|20799|0.0272492879471129|0.028852716447394|
-|Bonded Out - IJ|9856|0.0129125910864342|0.0136724060438249|
-|Paroled - Humanitarian|9454|0.0123859208736961|0.0131147450018589|
-|U.S. Marshals or other agency (explain in Detention Comments)|8549|0.0112002578325818|0.0118593140491741|
-|Order of supervision|5980|0.0078345469457058|0.00829555480337593|
-|Processing Disposition Changed Locally|5203|0.00681657989272697|0.00721768756554598|
-|Order of Recognizance - Humanitarian|3640|0.00476885466260353|0.00504946814118535|
-|Bonded Out - Field Office|2618|0.00342990700733408|0.003631732855391|
-|Order of Supervision - No SLRRFF|2015|0.00263990168822696|0.00279524129244189|
-|Relief Granted by IJ|1565|0.00205034547993806|0.00217099385740524|
-|Proceedings Terminated|1333|0.00174639650144245|0.00184915962423079|
-|Voluntary departure|1093|0.00143196652368837|0.00151622765887791|
-|Paroled - Public Benefit|928|0.00121579591398244|0.0012873369326978|
-|Order of Supervision - Humanitarian|876|0.00114766941880239|0.00121520167353801|
-|Voluntary Return|330|0.000432341219411859|0.00045778145236021|
-|Order of Supervision - Re-Release|151|0.000197828861003608|0.000209469694867854|
-|Withdrawal|102|0.000133632740545484|0.000141496085274974|
-|Died|17|2.22721234242473e-05|2.35826808791623e-05|
-|Escaped|11|1.44113739803953e-05|1.52593817453403e-05|
-|Title 42 Return|2|2.62024981461733e-06|2.77443304460733e-06|
+After cleaning, our dataset includes 368,668 individuals and 381,907 unique stays. *Note that one person may have multiple unique stays.* On average, each stay involves 2.00 detention events (book-ins). Detention release reasons vary across the 763,286 detention events. The most common reason is `Transferred` (386,645 occurrences), followed by `Removed` (193,947), and then `NA` (42,418), which typically indicates ongoing cases. Most detention release reasons that result in "movements" are `Transferred` (375,499), followed by `Processing Disposition Changed Locally` (5,186), which often includes movements from a facility to itself, and `U.S. Marshals or other agency (explain in Detention Comments)` (533). However, there are cases where a detention release reason is marked as `Transferred`, but no actual movement or transfer occurs. Specifically, 11,146 detentions were recorded as transfers but never resulted in a transfer, possibly because those cases are still ongoing.
 
 ### Large Networks
 #### Movement
-
+Analyzing the movement network, we see that the nodes with the highest in-degrees are Florence Staging Facility (20,998), Port Isabel Service Processing Center (19,877), and Adams County Correctional Center (16,639). This means that these detention facilities have the highest rate of detention movements going into them. One reason for this, is that many of these detention facilities transfer to themselves. Removing the "loops" in the graph, we see that the nodes with the highest in-degrees are Florence Staging Facility (18,884), Adams County Correctional Center (16,565), and Otay Mesa Detention Center (15,436).
 
 #### Transfer
+
+
+### Paths
+
 
 
