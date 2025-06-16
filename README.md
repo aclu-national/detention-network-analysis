@@ -90,16 +90,16 @@ From the analysis, it appears that there aare several detention facilities that 
 
 | Detention Facility | Stays Count | % of All Stays |
 |---|---|---|
-|ALEXANDRIA STAGING FACILITY|38639|10.1173845988683|
-|FLORENCE STAGING FACILITY|28428|7.44369702571568|
-|PORT ISABEL SPC|24477|6.40915196631641|
-|OTAY MESA DETENTION CENTER|21125|5.53145137428746|
-|ELOY FED CTR FACILITY (CORE CIVIC)|19274|5.04677840416646|
-|ADAMS COUNTY DET CENTER|18963|4.96534496618287|
-|PINE PRAIRIE ICE PROCESSING CENTER|18818|4.92737760763746|
-|SOUTH TEXAS ICE PROCESSING CENTER|16523|4.32644596721191|
-|OTERO CO PROCESSING CENTER|15837|4.14682108471434|
-|JACKSON PARISH CORRECTIONAL CENTER|15421|4.03789404226684|
+|ALEXANDRIA STAGING FACILITY|38639|10.12%|
+|FLORENCE STAGING FACILITY|28428|7.44%|
+|PORT ISABEL SPC|24477|6.41%|
+|OTAY MESA DETENTION CENTER|21125|5.53%|
+|ELOY FED CTR FACILITY (CORE CIVIC)|19274|5.05%|
+|ADAMS COUNTY DET CENTER|18963|4.97%|
+|PINE PRAIRIE ICE PROCESSING CENTER|18818|4.93%|
+|SOUTH TEXAS ICE PROCESSING CENTER|16523|4.33%|
+|OTERO CO PROCESSING CENTER|15837|4.15%|
+|JACKSON PARISH CORRECTIONAL CENTER|15421|4.04%|
 
 ## Discussion
 Analyzing the paths of immigration detention, we can see what role each detention facility plays in the detention process. For example, some are primarily for deportation, whereas others are pathways between detention facilities. We can quantify this for each detention facicility by looking at stays that involve at least two detention facilities and looking at the proportion of detentions that are someone's first detention, a pathway before their last detention, and their last detention. 
