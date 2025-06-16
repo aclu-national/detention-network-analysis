@@ -44,8 +44,7 @@ Finally, when considering total degree—the sum of in-degree and out-degree—t
 |PRAIRIELAND DETENTION CENTER|4490|12008|16498|4494|12008|16502|
 |WINN CORRECTIONAL CENTER|4434|11323|15757|4435|11324|15759|
 
-
 ### Paths
-
+Analyzing the paths of immigration detention, we can see what role each detention facility plays in the detention process. For example, some are primarily for deportation, whereas others are pathways between detention facilities. We can quantify this for each detention facicility by looking at stays that involve at least two detention facilities and looking at the proportion of detentions that are someone's first detention, a pathway before their last detention, and their last detention. 
 
 
