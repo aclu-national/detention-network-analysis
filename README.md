@@ -30,7 +30,7 @@ After cleaning, our dataset includes 368,668 individuals and 381,907 unique stay
 #### Movement
 Analyzing the movement network, we see that the nodes with the highest in-degrees are Florence Staging Facility (20,998), Port Isabel Service Processing Center (19,877), and Adams County Correctional Center (16,639). This means that these detention facilities have the highest rate of detention movements going into them. One reason for this, is that many of these detention facilities transfer to themselves. Removing the "loops" in the graph, we see that the nodes with the highest in-degrees are Florence Staging Facility (18,884), Adams County Correctional Center (16,565), and Otay Mesa Detention Center (15,436). The nodes with the highest out degree (removing loops) are Alexandria Staging Facility (39,886), Pine Prairie ICE Processing Center (18,251), and Florida Service Processing Center (14,796). This means that these detention facilities move the most people to other detention facilities. Finally, the nodes with the highest total degrees (moving people in and out) are Alexandria Staging Facility (48,867), Florence Staging Facility (30,080), and Pine Prairie ICE Processing Center (29,083). You can find the detention facilities with the top fifty degrees below. 
 
-|facility|in_degree|out_degree|total_degree|
+| Facility | In Degree | Out Degree | Total Degree |
 |---|---|---|---|
 |ALEXANDRIA STAGING FACILITY|9031|39836|48867|
 |FLORENCE STAGING FACILITY|18884|11196|30080|
