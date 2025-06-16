@@ -103,3 +103,10 @@ From the analysis, it appears that there aare several detention facilities that 
 |SOUTH TEXAS ICE PROCESSING CENTER|16523|4.33%|
 |OTERO CO PROCESSING CENTER|15837|4.15%|
 |JACKSON PARISH CORRECTIONAL CENTER|15421|4.04%|
+
+
+## Further Analysis Necessary
+- [ ] Analysis of loops.
+- [ ] State by state analysis.
+- [ ] Analysis of how far people are transferred.
+- [ ] Visualization of `movement` and `transferred` graphs.
