@@ -49,7 +49,20 @@ Finally, when considering total degree—the sum of in-degree and out-degree—t
 |WINN CORRECTIONAL CENTER|4434|11323|15757|4435|11324|15759|
 
 ### Paths
-Analysis of detainee pathways reveals functional distinctions among facilities. By evaluating stays involving multiple facilities, we quantify the proportion of initial intake locations (first detention facility in the stay), intermediate pathway facilities (facilities occupied between first and last), and final detention or release points (last facility in the stay). D
+Analysis of detainee pathways reveals functional distinctions among facilities. By evaluating stays involving multiple facilities, we quantify the proportion of initial intake locations (first detention facility in the stay), intermediate pathway facilities (facilities occupied between first and last), and final detention or release points (last facility in the stay). Particularly, below are the results for the 10 most represented detention facilities. 
+
+|detention_facility|percent_first|percent_middle|percent_last|n|
+|---|---|---|---|---|
+|ALEXANDRIA STAGING FACILITY|0.47%|22.19%|77.34%|38267|
+|FLORENCE STAGING FACILITY|47.15%|36.23%|16.62%|19242|
+|PORT ISABEL SPC|52.7%|14.37%|32.92%|18521|
+|PINE PRAIRIE ICE PROCESSING CENTER|2.73%|55.46%|41.81%|18282|
+|ADAMS COUNTY DET CENTER|35.7%|55.65%|8.65%|18050|
+|OTAY MESA DETENTION CENTER|91.92%|3.96%|4.13%|15930|
+|FLORENCE SPC|2.48%|80.7%|16.81%|14072|
+|JACKSON PARISH CORRECTIONAL CENTER|10.91%|24%|65.09%|13354|
+|ELOY FED CTR FACILITY (CORE CIVIC)|75.07%|6.19%|18.74%|12868|
+|STEWART DETENTION CENTER|8.57%|36.15%|55.29%|12697|
 
 
 ## Discussion
