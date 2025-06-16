@@ -53,16 +53,16 @@ Analysis of detainee pathways reveals distinct functional roles among detention 
 
 | Detention Facility                 | Percent Initial | Percent Intermediate | Percent Final |
 | ---------------------------------- | --------------- | -------------------- | ------------- |
-| ALEXANDRIA STAGING FACILITY        | 0.47%           | 22.19%               | 77.34%        |
-| FLORENCE STAGING FACILITY          | 47.15%          | 36.23%               | 16.62%        |
-| PORT ISABEL SPC                    | 52.7%           | 14.37%               | 32.92%        |
-| PINE PRAIRIE ICE PROCESSING CENTER | 2.73%           | 55.46%               | 41.81%        |
-| ADAMS COUNTY DET CENTER            | 35.7%           | 55.65%               | 8.65%         |
-| OTAY MESA DETENTION CENTER         | 91.92%          | 3.96%                | 4.13%         |
-| FLORENCE SPC                       | 2.48%           | 80.7%                | 16.81%        |
-| JACKSON PARISH CORRECTIONAL CENTER | 10.91%          | 24%                  | 65.09%        |
-| ELOY FED CTR FACILITY (CORE CIVIC) | 75.07%          | 6.19%                | 18.74%        |
-| STEWART DETENTION CENTER           | 8.57%           | 36.15%               | 55.29%        |
+|ALEXANDRIA STAGING FACILITY|0.47%|22.19%|77.34%|
+|JACKSON PARISH CORRECTIONAL CENTER|10.91%|24%|65.09%|
+|FLORENCE SPC|2.48%|80.7%|16.81%|
+|PINE PRAIRIE ICE PROCESSING CENTER|2.73%|55.46%|41.81%|
+|ADAMS COUNTY DET CENTER|35.7%|55.65%|8.65%|
+|FLORENCE STAGING FACILITY|47.15%|36.23%|16.62%|
+|PORT ISABEL SPC|52.7%|14.37%|32.92%|
+|ELOY FED CTR FACILITY (CORE CIVIC)|75.07%|6.19%|18.74%|
+|STEWART DETENTION CENTER|8.57%|36.15%|55.29%|
+|OTAY MESA DETENTION CENTER|91.92%|3.96%|4.13%|
 
 
 
