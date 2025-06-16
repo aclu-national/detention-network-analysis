@@ -1,12 +1,30 @@
-# The Immigration Detention Network
+# Analyzing the Immigration Detention Network
 
 ## Summary
-In this project, we used network analysis to understand the "movements" of detained people across detention facilities between Mid November 2024 and Mid February 2025, using detention data from the Deportation Data Project. Many of these "movements" are `transfers` between one facility and another, but not all. We conduct this analysis to better understand the function each detention facility is playing in the larger web of the immigration/deportation project, including in an attempt to answer three question: where are people being sent and what are the commons paths through detention.
+This project applies network analysis to examine the "movements" of detained individuals across immigration detention facilities from mid-November 2024 to mid-February 2025, using data sourced from the Deportation Data Project. While many of these movements represent transfers between facilities, not all do. Our goal is to better understand the roles each facility plays within the broader immigration and deportation system and to address key questions such as: Where are people being sent and what are the common pathways?
+
+### Cleaning  
+To construct the immigration detention network, we first downloaded detention data spanning mid-November 2024 to mid-February 2025 from the Deportation Data Project. The full cleaning process is documented in `analysis.R`. Key steps include:  
+1. Removing invalid unique identifiers.  
+2. Creating a combined stay/unique identifier variable.  
+3. Excluding instances with identical book-in times within a single stay.  
+4. Counting the order of facility entries per stay.  
+5. Creating a `moved` variable to flag whether an individual moved to another facility during their stay.  
+6. Categorizing movement types (e.g., transfer, removal).  
+7. Identifying destinations for each movement and excluding records without a defined movement type.
+
+### Large Networks  
+We constructed two distinct networks: a broad `movement` network and a more specific `transfer` network. The movement network captures any relocation between facilities during a single stay, regardless of reason. The transfer network includes only those moves explicitly classified as transfers. Movements are defined by a sequence of detention book-in dates within one stay—for example, if an individual was initially booked into Alexandria Staging Facility and subsequently booked into Pine Prairie Detention Facility during the same stay, this counts as a movement. If the `Detention Release Reason` for that move was "Transferred," it is classified as a transfer.  
+
+Using facility pairs (origin and destination), we created two directed graphs representing facility-to-facility transfers. Each graph includes all 619 detention facilities as nodes, with edges weighted by the frequency of transfers between them. 
+
+### Individual Networks  
+Beyond aggregate networks, we mapped the detention pathway of each individual stay. For each stay, we generated a graph tracing their sequence of detention facilities—from the initial facility, through intermediate stops, to the final facility.
 
 ## Analysis
-After initial cleaning, we start with a dataset of 368,668 individual people and 381,907 unique stays, where unique stays are defined as unique stay book-in dates for unique people. This means that a single person may have multiple unique stays. Within a single stay a person may receive a number of detentions, where they are detained in detention facilities. On average, people experience 2.00 detentions per unique stay.
 
-There are a number of reasons that people may be removed from their detention within and at the end of their detention. Out of all 763,286 detentions, the most common detention release reason is 386,645 `Transferred`, the second most common 193,947 `Removed`, and the third most common is 42,418, `NA` (this is generally the case when the case is still ongoing). You can find the others below.
+### Overview
+After cleaning, our dataset includes 368,668 individuals and 381,907 unique stays. *Note that one person may have multiple unique stays*. On average, each stay involves 2.00 detention events (book-ins). Additionally, detention release reasons vary: across the 763,286 detention events, the most common reason is `Transferred` (386,645 occurrences), followed by `Removed` (193,947), and then `NA` (42,418), which typically indicates ongoing cases. Other reasons are less frequent and detailed below.
 
 |Detention Release Reason| Count | Percent | Valid Percent|
 |---|---|---|---|
@@ -35,3 +53,11 @@ There are a number of reasons that people may be removed from their detention wi
 |Died|17|2.22721234242473e-05|2.35826808791623e-05|
 |Escaped|11|1.44113739803953e-05|1.52593817453403e-05|
 |Title 42 Return|2|2.62024981461733e-06|2.77443304460733e-06|
+
+### Large Networks
+#### Movement
+
+
+#### Transfer
+
+
