@@ -49,6 +49,7 @@ Finally, when considering total degree—the sum of in-degree and out-degree—t
 |WINN CORRECTIONAL CENTER|4434|11323|15757|4435|11324|15759|
 
 ### Paths
+Analysis of detainee pathways reveals functional distinctions among facilities. By evaluating stays involving multiple facilities, we quantify the proportion of initial intake locations (first detention facility in the stay), intermediate pathway facilities (facilities occupied between first and last), and final detention or release points (last facility in the stay). D
 
 
 ## Discussion
