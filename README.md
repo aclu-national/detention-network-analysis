@@ -65,6 +65,79 @@ Analysis of detainee pathways reveals distinct functional roles among detention 
 |OTAY MESA DETENTION CENTER|91.92%|3.96%|4.13%|
 
 
+<table>
+  <thead>
+    <tr>
+      <th>Detention Facility</th>
+      <th style="background-color:#cce5ff;">Percent Initial</th>
+      <th style="background-color:#fff3cd;">Percent Intermediate</th>
+      <th style="background-color:#d4edda;">Percent Final</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ALEXANDRIA STAGING FACILITY</td>
+      <td style="background-color:#cce5ff;">0.47%</td>
+      <td style="background-color:#fff3cd;">22.19%</td>
+      <td style="background-color:#d4edda;">77.34%</td>
+    </tr>
+    <tr>
+      <td>FLORENCE STAGING FACILITY</td>
+      <td style="background-color:#cce5ff;">47.15%</td>
+      <td style="background-color:#fff3cd;">36.23%</td>
+      <td style="background-color:#d4edda;">16.62%</td>
+    </tr>
+    <tr>
+      <td>PORT ISABEL SPC</td>
+      <td style="background-color:#cce5ff;">52.7%</td>
+      <td style="background-color:#fff3cd;">14.37%</td>
+      <td style="background-color:#d4edda;">32.92%</td>
+    </tr>
+    <tr>
+      <td>PINE PRAIRIE ICE PROCESSING CENTER</td>
+      <td style="background-color:#cce5ff;">2.73%</td>
+      <td style="background-color:#fff3cd;">55.46%</td>
+      <td style="background-color:#d4edda;">41.81%</td>
+    </tr>
+    <tr>
+      <td>ADAMS COUNTY DET CENTER</td>
+      <td style="background-color:#cce5ff;">35.7%</td>
+      <td style="background-color:#fff3cd;">55.65%</td>
+      <td style="background-color:#d4edda;">8.65%</td>
+    </tr>
+    <tr>
+      <td>OTAY MESA DETENTION CENTER</td>
+      <td style="background-color:#cce5ff;">91.92%</td>
+      <td style="background-color:#fff3cd;">3.96%</td>
+      <td style="background-color:#d4edda;">4.13%</td>
+    </tr>
+    <tr>
+      <td>FLORENCE SPC</td>
+      <td style="background-color:#cce5ff;">2.48%</td>
+      <td style="background-color:#fff3cd;">80.7%</td>
+      <td style="background-color:#d4edda;">16.81%</td>
+    </tr>
+    <tr>
+      <td>JACKSON PARISH CORRECTIONAL CENTER</td>
+      <td style="background-color:#cce5ff;">10.91%</td>
+      <td style="background-color:#fff3cd;">24%</td>
+      <td style="background-color:#d4edda;">65.09%</td>
+    </tr>
+    <tr>
+      <td>ELOY FED CTR FACILITY (CORE CIVIC)</td>
+      <td style="background-color:#cce5ff;">75.07%</td>
+      <td style="background-color:#fff3cd;">6.19%</td>
+      <td style="background-color:#d4edda;">18.74%</td>
+    </tr>
+    <tr>
+      <td>STEWART DETENTION CENTER</td>
+      <td style="background-color:#cce5ff;">8.57%</td>
+      <td style="background-color:#fff3cd;">36.15%</td>
+      <td style="background-color:#d4edda;">55.29%</td>
+    </tr>
+  </tbody>
+</table>
+
 
 ## Discussion
 Analyzing the paths of immigration detention, we can see what role each detention facility plays in the detention process. For example, some are primarily for deportation, whereas others are pathways between detention facilities. We can quantify this for each detention facicility by looking at stays that involve at least two detention facilities and looking at the proportion of detentions that are someone's first detention, a pathway before their last detention, and their last detention. 
