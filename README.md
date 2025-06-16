@@ -4,6 +4,8 @@
 ## Summary
 This study applies network analysis methodologies to the examination of detainee movements within the U.S. immigration detention system from mid-November 2023 to mid-February 2025. Utilizing data obtained from the [Deportation Data Project](https://deportationdata.org/data/ice.html), we characterize the patterns and pathways of detainee transfers across [617 detention facilities](/detention_facilities.csv). The analysis distinguishes between general movements between facilities and explicitly classified transfers. The purpose of this research is to answer: 
 
+![](transfer_graph_visualization.html) 
+
 - What are the common pathways of detainee movement?
 - Which facilities function as primary hubs for intake, transfer, or deportation?
 
