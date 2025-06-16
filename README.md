@@ -1,9 +1,13 @@
-# Analyzing the Immigration Detention Network
+# A Network-Based Examination of Detention Facility Movements
+
 
 ## Summary
-This project applies network analysis to examine the "movements" of detained individuals across immigration detention facilities from mid-November 2024 to mid-February 2025, using data sourced from the Deportation Data Project. While many of these movements represent transfers between facilities, not all do. Our goal is to better understand the roles each facility plays within the broader immigration and deportation system and to address key questions such as: Where are people being sent and what are the common pathways?
+This study applies network analysis methodologies to the examination of detainee movements within the U.S. immigration detention system over a x-month period from mid-November 2024 to mid-February 2025. Utilizing data obtained from the Deportation Data Project, we characterize the patterns and pathways of detainee transfers across 619 detention facilities. The analysis distinguishes between general movements between facilities and explicitly classified transfers. Key questions addressed include: What are the common pathways of detainee movement, and which facilities function as primary hubs for intake, transfer, or deportation?
 
-### Cleaning  
+## Introduction
+The immigration detention system comprises a complex network of facilities that hold individuals under custody. Understanding the movement dynamics between these facilities is critical for holding them accountable - particularly as many are forced into a "Blackhole" of detention. This research leverages network analysis techniques to explore detainee "movements"—defined as changes in facility bookings within a single detention episode—and to identify systemic patterns and facility roles.
+
+## Data  
 To construct the immigration detention network, we first downloaded detention data spanning mid-November 2024 to mid-February 2025 from the Deportation Data Project. The full cleaning process is documented in `analysis.R`. Key steps include:  
 1. Removing invalid unique identifiers.  
 2. Creating a combined stay/unique identifier variable.  
@@ -19,9 +23,9 @@ We constructed two distinct networks: a broad `movement` network and a more spec
 ### Paths  
 Beyond aggregate networks, we mapped the detention pathway of each individual stay. For each stay, we generated a graph tracing their sequence of detention facilities—from the initial facility, through intermediate stops, to the final facility.
 
-## Analysis
+## Results
 
-### Overview
+### Dataset Overview
 After cleaning, our dataset includes 368,668 individuals and 381,907 unique stays. *Note that one person may have multiple unique stays.* On average, each stay involves 2.00 detention events (book-ins). Detention release reasons vary across the 763,286 detention events. The most common reason is `Transferred` (386,645 occurrences), followed by `Removed` (193,947), and then `NA` (42,418), which typically indicates ongoing cases. Most detention release reasons that result in "movements" are `Transferred` (375,499), followed by `Processing Disposition Changed Locally` (5,186), which often includes movements from a facility to itself, and `U.S. Marshals or other agency (explain in Detention Comments)` (533). However, there are cases where a detention release reason is marked as `Transferred`, but no actual movement or transfer occurs. Specifically, 11,146 detentions were recorded as transfers but never resulted in a transfer, possibly because those cases are still ongoing.
 
 ### Networks
@@ -45,6 +49,9 @@ Finally, when considering total degree—the sum of in-degree and out-degree—t
 |WINN CORRECTIONAL CENTER|4434|11323|15757|4435|11324|15759|
 
 ### Paths
+
+
+## Discussion
 Analyzing the paths of immigration detention, we can see what role each detention facility plays in the detention process. For example, some are primarily for deportation, whereas others are pathways between detention facilities. We can quantify this for each detention facicility by looking at stays that involve at least two detention facilities and looking at the proportion of detentions that are someone's first detention, a pathway before their last detention, and their last detention. 
 
 
