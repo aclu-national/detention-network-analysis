@@ -100,8 +100,3 @@ From the analysis, it appears that there aare several detention facilities that 
 |SOUTH TEXAS ICE PROCESSING CENTER|16523|4.33%|
 |OTERO CO PROCESSING CENTER|15837|4.15%|
 |JACKSON PARISH CORRECTIONAL CENTER|15421|4.04%|
-
-## Discussion
-Analyzing the paths of immigration detention, we can see what role each detention facility plays in the detention process. For example, some are primarily for deportation, whereas others are pathways between detention facilities. We can quantify this for each detention facicility by looking at stays that involve at least two detention facilities and looking at the proportion of detentions that are someone's first detention, a pathway before their last detention, and their last detention. 
-
-
