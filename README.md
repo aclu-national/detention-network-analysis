@@ -2,13 +2,16 @@
 
 
 ## Summary
-This study applies network analysis methodologies to the examination of detainee movements within the U.S. immigration detention system from mid-November 2023 to mid-February 2025. Utilizing data obtained from the Deportation Data Project, we characterize the patterns and pathways of detainee transfers across [617 detention facilities](/detention_facilities.csv). The analysis distinguishes between general movements between facilities and explicitly classified transfers. Key questions addressed include: What are the common pathways of detainee movement, and which facilities function as primary hubs for intake, transfer, or deportation?
+This study applies network analysis methodologies to the examination of detainee movements within the U.S. immigration detention system from mid-November 2023 to mid-February 2025. Utilizing data obtained from the [Deportation Data Project](https://deportationdata.org/data/ice.html), we characterize the patterns and pathways of detainee transfers across [617 detention facilities](/detention_facilities.csv). The analysis distinguishes between general movements between facilities and explicitly classified transfers. The purpose of this research is to answer: 
+
+- What are the common pathways of detainee movement?
+- Which facilities function as primary hubs for intake, transfer, or deportation?
 
 ## Introduction
-The immigration detention system comprises a complex network of facilities that hold individuals under custody. Understanding the movement dynamics between these facilities is critical for holding them accountable - particularly as many are forced into a "Blackhole" of detention. This research leverages network analysis techniques to explore detainee "movements"—defined as changes in facility bookings within a single detention episode—and to identify systemic patterns and facility roles.
+The immigration detention system comprises a complex network of facilities that hold individuals under custody. Understanding the movement dynamics between these facilities is critical for holding them accountable - particularly as many are forced into a ["Blackhole"](https://www.aclu.org/documents/inside-the-black-hole) of detention. This research leverages network analysis techniques to explore detainee "movements", defined as changes in facility bookings within a single detention episode, and to identify systemic patterns and facility roles.
 
 ## Data & Methods
-To construct the immigration detention network, we first downloaded detention data spanning mid-November 2024 to mid-February 2025 from the [Deportation Data Project](https://deportationdata.org/data/ice.html). The full cleaning process is documented in `analysis.R`. Key steps include:  
+To construct the immigration detention network, we first downloaded detention data spanning mid-November 2023 to mid-February 2025 from the [Deportation Data Project](https://deportationdata.org/data/ice.html). The full cleaning process is documented in `analysis.R`. Key steps include:  
 1. Removing invalid unique identifiers.  
 2. Creating a combined stay/unique identifier variable.  
 3. Excluding instances with identical book-in times within a single stay.  
@@ -18,7 +21,7 @@ To construct the immigration detention network, we first downloaded detention da
 7. Identifying destinations for each movement and excluding records without a defined movement type.
 
 ### Networks  
-We constructed two distinct networks: a broad `movement` network and a more specific `transfer` network. The movement network captures any relocation between facilities during a single stay, regardless of reason. The transfer network includes only those moves explicitly classified as transfers. Movements are defined by a sequence of detention book-in dates within one stay—for example, if an individual was initially booked into Alexandria Staging Facility and subsequently booked into Pine Prairie Detention Facility during the same stay, this counts as a movement. If the `Detention Release Reason` for that move was "Transferred," it is classified as a transfer.  Using facility pairs (origin and destination), we created two directed graphs representing facility-to-facility transfers. Each graph includes all 619 detention facilities as nodes, with edges weighted by the frequency of transfers between them. 
+We constructed two distinct networks: a broad `movement` network and a more specific `transfer` network (directed and weighted graphs). The movement network captures any relocation between facilities during a single stay, regardless of reason. The transfer network includes only those moves explicitly classified as transfers. Movements are defined by a sequence of detention book-in dates within one stay—for example, if an individual was initially booked into Alexandria Staging Facility and subsequently booked into Pine Prairie Detention Facility during the same stay, this counts as a movement. If the `Detention Release Reason` for that move was "Transferred," it is classified as a transfer.  Using facility pairs (origin and destination), we created two directed graphs representing facility-to-facility transfers. Each graph includes all 619 detention facilities as nodes, with edges weighted by the frequency of transfers between them. 
 
 ### Paths  
 Beyond aggregate networks, we mapped the detention pathway of each individual stay. For each stay, we generated a graph tracing their sequence of detention facilities—from the initial facility, through intermediate stops, to the final facility.
