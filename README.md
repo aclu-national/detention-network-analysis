@@ -107,6 +107,6 @@ From the analysis, it appears that there aare several detention facilities that 
 
 ## Further Analysis Necessary
 - [ ] Analysis of loops.
-- [ ] State by state analysis.
+- [ ] State by state analysis, including state networks.
 - [ ] Analysis of how far people are transferred.
 - [ ] Visualization of `movement` and `transferred` graphs.
