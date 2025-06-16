@@ -51,7 +51,7 @@ Finally, when considering total degree—the sum of in-degree and out-degree—t
 ### Paths
 Analysis of detainee pathways reveals distinct functional roles among detention facilities. By examining stays involving multiple facilities, we quantify the proportions of initial intake locations (the first facility in a detainee’s stay), intermediate facilities (those occupied between the first and last), and final detention or release points (the last facility in the stay). The results below focus on the ten most represented detention facilities. Notably, Alexandria Staging Facility is primarily used as a final detention site, Florence Staging Facility serves mostly as an initial and intermediate location, and Otay Mesa Detention Center is overwhelmingly skewed toward initial intakes.
 
-| Detention Facility                 | Percent Initial | Percent Intermediate | Percent Final |
+| Detention Facility                 | % Initial | % Intermediate | % Final |
 | ---------------------------------- | --------------- | -------------------- | ------------- |
 |ALEXANDRIA STAGING FACILITY|0.47%|22.19%|77.34%|
 |JACKSON PARISH CORRECTIONAL CENTER|10.91%|24%|65.09%|
@@ -86,6 +86,20 @@ Looking at the most common subpaths through immigration detention we see that th
 |KROME NORTH SPC->MIAMI STAGING FACILITY->EL VALLE DETENTION FACILITY->FLORENCE STAGING FACILITY->FLORENCE SPC->NW ICE PROCESSING CTR|37|6|
 |PHOENIX DIST OFFICE->FLORENCE STAGING FACILITY->PHOENIX DIST OFFICE->FLORENCE STAGING FACILITY->PHOENIX DIST OFFICE->FLORENCE STAGING FACILITY|37|6|
 
+From the analysis, it appears that there aare several detention facilities that are the stage of transfers. We can ask this more explicitly by looking at the percentage of stays that include at least one stay in the detention facility. Doing this analysis, we can see that 10.10% of all stays include a detention in Alexandria Staging Facility, 7.44% include detention in Florence Staging Facility, and 6.41% include detention in Port Isabel Service Processing Center. You can find more findings below. 
+
+| Detention Facility | Stays Count | % of All Stays |
+|---|---|---|
+|ALEXANDRIA STAGING FACILITY|38639|10.1173845988683|
+|FLORENCE STAGING FACILITY|28428|7.44369702571568|
+|PORT ISABEL SPC|24477|6.40915196631641|
+|OTAY MESA DETENTION CENTER|21125|5.53145137428746|
+|ELOY FED CTR FACILITY (CORE CIVIC)|19274|5.04677840416646|
+|ADAMS COUNTY DET CENTER|18963|4.96534496618287|
+|PINE PRAIRIE ICE PROCESSING CENTER|18818|4.92737760763746|
+|SOUTH TEXAS ICE PROCESSING CENTER|16523|4.32644596721191|
+|OTERO CO PROCESSING CENTER|15837|4.14682108471434|
+|JACKSON PARISH CORRECTIONAL CENTER|15421|4.03789404226684|
 
 ## Discussion
 Analyzing the paths of immigration detention, we can see what role each detention facility plays in the detention process. For example, some are primarily for deportation, whereas others are pathways between detention facilities. We can quantify this for each detention facicility by looking at stays that involve at least two detention facilities and looking at the proportion of detentions that are someone's first detention, a pathway before their last detention, and their last detention. 
