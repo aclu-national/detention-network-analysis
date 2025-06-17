@@ -9,6 +9,23 @@ library(data.table)
 
 # ------------------------- Data Prep and Cleaning -----------------------------
 
+# Creating a dataframe grouped by `stayid`, where each stay
+df_paths <- df_clean %>%
+  left_join(code_lookup, by = "detention_facility_code") %>%
+  mutate(state = ifelse(is.na(state), "unknown", state)) %>%
+  group_by(stayid) %>%
+  arrange(book_in_date_time) %>%
+  summarise(
+    journey = list(state), 
+    .groups = 'drop') %>%
+  mutate(
+    edges = map(journey, ~ {
+      nodes <- .x  
+      data.frame(from = nodes[-length(nodes)], to = nodes[-1])  
+    }),
+    graph = map(edges, ~ graph_from_data_frame(.x, directed = TRUE))
+  )
+
 # Creating a filtered dataframe of moves
 df_move <- df_clean %>%
   filter(!is.na(move_location)) %>%
