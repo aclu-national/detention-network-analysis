@@ -17,7 +17,6 @@ The immigration detention system comprises a complex network of facilities that 
 - **`location_input/`**: This folder holds the data used in `location_analysis.R` in three folders `monthly`, `yearly`, and `lookup`. 
 - **`output/`**: This folder holds the output of the scripts.
 
-
 ## Data & Methods
 
 ### Cleaning
@@ -38,7 +37,7 @@ We also similarly created two distinct networks: [`movement`](/movement_adjacenc
 ### Paths  
 Beyond aggregate networks, we mapped the detention pathway of each individual stay. For each stay, we generated a graph tracing their sequence of detention facilities—from the initial facility, through intermediate stops, to the final facility. We created a similar analysis mapping the state pathways.
 
-### Dataset Overview
+## Dataset Overview
 After cleaning, our dataset includes 368,668 individuals and 381,907 unique stays. *Note that one person may have multiple unique stays.* On average, each stay involves 2.00 detention events (book-ins). Detention release reasons vary across the 763,286 detention events. The most common reason is `Transferred` (386,645 occurrences), followed by `Removed` (193,947), and then `NA` (42,418), which typically indicates ongoing cases. Most detention release reasons that result in "movements" are `Transferred` (375,499), followed by `Processing Disposition Changed Locally` (5,186), which often includes movements from a facility to itself, and `U.S. Marshals or other agency (explain in Detention Comments)` (533). However, there are cases where a detention release reason is marked as `Transferred`, but no actual movement or transfer occurs. Specifically, 11,146 detentions were recorded as transfers but never resulted in a transfer, possibly because those cases are still ongoing.
 
 ## Facility Results
