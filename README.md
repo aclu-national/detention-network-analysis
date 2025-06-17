@@ -7,6 +7,8 @@ This study applies network analysis methodologies to the examination of detainee
 - What are the common pathways of detainee movement?
 - Which facilities function as primary hubs for intake, transfer, or deportation?
 
+## Structure
+
 ## Introduction
 The immigration detention system comprises a complex network of facilities that hold individuals under custody. Understanding the movement dynamics between these facilities is critical for holding them accountable - particularly as many are forced into a ["Blackhole"](https://www.aclu.org/documents/inside-the-black-hole) of detention. This research leverages network analysis techniques to explore detainee "movements", defined as changes in facility bookings within a single detention episode, and to identify systemic patterns and facility roles.
 
@@ -31,7 +33,7 @@ Beyond aggregate networks, we mapped the detention pathway of each individual st
 ### Dataset Overview
 After cleaning, our dataset includes 368,668 individuals and 381,907 unique stays. *Note that one person may have multiple unique stays.* On average, each stay involves 2.00 detention events (book-ins). Detention release reasons vary across the 763,286 detention events. The most common reason is `Transferred` (386,645 occurrences), followed by `Removed` (193,947), and then `NA` (42,418), which typically indicates ongoing cases. Most detention release reasons that result in "movements" are `Transferred` (375,499), followed by `Processing Disposition Changed Locally` (5,186), which often includes movements from a facility to itself, and `U.S. Marshals or other agency (explain in Detention Comments)` (533). However, there are cases where a detention release reason is marked as `Transferred`, but no actual movement or transfer occurs. Specifically, 11,146 detentions were recorded as transfers but never resulted in a transfer, possibly because those cases are still ongoing.
 
-### Networks
+### Facility Analysis
 Analyzing the movement network, we find that the detention facilities with the highest in-degrees are Florence Staging Facility (20,998), Port Isabel Service Processing Center (19,877), and Adams County Correctional Center (16,639). This indicates that these facilities receive the greatest number of incoming detainees. A significant factor contributing to these high values is that many facilities transfer detainees to themselves. After removing these self-transfers (loops) from the analysis, the top facilities by in-degree are Florence Staging Facility (18,884), Adams County Correctional Center (16,565), and Otay Mesa Detention Center (15,436).
 
 Regarding out-degree (also excluding loops), the detention facilities with the highest values are Alexandria Staging Facility (39,886), Pine Prairie ICE Processing Center (18,251), and Florida Service Processing Center (14,796), meaning these locations move the most detainees to other facilities.
@@ -51,7 +53,6 @@ Finally, when considering total degree—the sum of in-degree and out-degree—t
 |PRAIRIELAND DETENTION CENTER|4490|12008|16498|4494|12008|16502|
 |WINN CORRECTIONAL CENTER|4434|11323|15757|4435|11324|15759|
 
-### Paths
 Analysis of detainee pathways reveals distinct functional roles among detention facilities. By examining stays involving multiple facilities, we quantify the proportions of initial intake locations (the first facility in a detainee’s stay), intermediate facilities (those occupied between the first and last), and final detention or release points (the last facility in the stay). The results below focus on the ten most represented detention facilities. Notably, Alexandria Staging Facility is primarily used as a final detention site, Florence Staging Facility serves mostly as an initial and intermediate location, and Otay Mesa Detention Center is overwhelmingly skewed toward initial intakes.
 
 | Detention Facility                 | % Initial | % Intermediate | % Final |
@@ -104,9 +105,10 @@ From the analysis, it appears that there aare several detention facilities that 
 |OTERO CO PROCESSING CENTER|15837|4.15%|
 |JACKSON PARISH CORRECTIONAL CENTER|15421|4.04%|
 
+### State Analysis
 
 ## Further Analysis Necessary
 - [ ] Analysis of loops.
-- [ ] State by state analysis, including state networks.
+- [x] State by state analysis, including state networks.
 - [ ] Analysis of how far people are transferred.
 - [ ] Visualization of `movement` and `transferred` graphs.
