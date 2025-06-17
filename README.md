@@ -7,10 +7,14 @@ This study applies network analysis methodologies to the examination of detainee
 - What are the common pathways of detainee movement?
 - Which facilities function as primary hubs for intake, transfer, or deportation?
 
-## Structure
-
-## Introduction
+## Purpose
 The immigration detention system comprises a complex network of facilities that hold individuals under custody. Understanding the movement dynamics between these facilities is critical for holding them accountable - particularly as many are forced into a ["Blackhole"](https://www.aclu.org/documents/inside-the-black-hole) of detention. This research leverages network analysis techniques to explore detainee "movements", defined as changes in facility bookings within a single detention episode, and to identify systemic patterns and facility roles.
+
+## File Structure
+- **`data_cleaning.R`**: This script cleans the data downloaded from the Deportation Data Project.
+- **`network_scripts/`**: This folder holds `facility_analysis.R` and `state_analysis.R`, both of which conduct network/path analyses of their respective locations.
+- **`location_scripts/`**: This folder holds `location_analysis.R` and `location_scraper.R`. In `location_analysis.R` we use a number of look-up tables creating by the Vera Institute, Marshall Project, TRAC, and others to create a condensed `code_lookup.csv`.
+- **`output/`**: This folder holds the output of the scripts.
 
 ## Data & Methods
 To construct the immigration detention network, we first downloaded detention data spanning mid-November 2023 to mid-February 2025 from the [Deportation Data Project](https://deportationdata.org/data/ice.html). The full cleaning process is documented in `analysis.R`. Key steps include:  
