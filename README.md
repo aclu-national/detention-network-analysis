@@ -12,7 +12,7 @@ The immigration detention system comprises a complex network of facilities that 
 
 ## File Structure
 - **[`data_cleaning.R`]("/data_cleaning.R")**: This script cleans the data downloaded from the Deportation Data Project.
-- **[`network_scripts/`]("/network_scripts")**: This folder holds `facility_analysis.R` and `state_analysis.R`, both of which conduct network/path analyses of their respective locations.
+- **[`network_scripts/`](/network_scripts)**: This folder holds `facility_analysis.R` and `state_analysis.R`, both of which conduct network/path analyses of their respective locations.
 - **`location_scripts/`**: This folder holds `location_analysis.R` and `location_scraper.R`. In `location_analysis.R` we use a number of look-up tables creating by the Vera Institute, Marshall Project, TRAC, and others to create a condensed `code_lookup.csv`.
 - **`location_input/`**: This folder holds the data used in `location_analysis.R` in three folders `monthly`, `yearly`, and `lookup`. 
 - **`output/`**: This folder holds the output of the scripts.
