@@ -18,6 +18,8 @@ The immigration detention system comprises a complex network of facilities that 
 - **`output/`**: This folder holds the output of the scripts.
 
 ## Data & Methods
+
+### Cleaning
 To construct the immigration detention network, we first downloaded detention data spanning mid-November 2023 to mid-February 2025 from the [Deportation Data Project](https://deportationdata.org/data/ice.html). The full cleaning process is documented in `analysis.R`. Key steps include:  
 1. Removing invalid unique identifiers.  
 2. Creating a combined stay/unique identifier variable.  
@@ -30,8 +32,10 @@ To construct the immigration detention network, we first downloaded detention da
 ### Networks  
 We constructed two distinct networks: a broad [`movement`](/movement_adjacency_matrix.csv) network and a more specific [`transfer`](/transfer_adjacency_matrix.csv) network (weighted directed graphs). The movement network captures any relocation between facilities during a single stay, regardless of reason. The transfer network includes only those moves explicitly classified as transfers. Movements are defined by a sequence of detention book-in dates within one stay—for example, if an individual was initially booked into Alexandria Staging Facility and subsequently booked into Pine Prairie Detention Facility during the same stay, this counts as a movement. If the `Detention Release Reason` for that move was "Transferred," it is classified as a transfer.  Using facility pairs (origin and destination), we created two directed graphs representing facility-to-facility transfers. Each graph includes all 617 detention facilities as nodes, with edges weighted by the frequency of transfers between them. 
 
+We also similarly created two distinct networks: [`movement`](/movement_adjacency_matrix.csv) and [`transfer`](/transfer_adjacency_matrix.csv), by state, rather than detention facility. We did so by mapping each detention facility to its corresponding state.
+
 ### Paths  
-Beyond aggregate networks, we mapped the detention pathway of each individual stay. For each stay, we generated a graph tracing their sequence of detention facilities—from the initial facility, through intermediate stops, to the final facility.
+Beyond aggregate networks, we mapped the detention pathway of each individual stay. For each stay, we generated a graph tracing their sequence of detention facilities—from the initial facility, through intermediate stops, to the final facility. We created a similar analysis mapping the state pathways.
 
 ## Results
 
