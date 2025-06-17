@@ -15,7 +15,7 @@ The immigration detention system comprises a complex network of facilities that 
 - [`network_scripts/`](/network_scripts): This folder holds `facility_analysis.R` and `state_analysis.R`, both of which conduct network/path analyses of their respective locations.
 - [`location_scripts/`](/location_scripts): This folder holds `location_analysis.R` and `location_scraper.R`. In `location_analysis.R` we use a number of look-up tables creating by the Vera Institute, Marshall Project, TRAC, and others to create a condensed `code_lookup.csv`.
 - [`location_inputs/`](/location_inputs): This folder holds the data used in `location_analysis.R` in three folders `monthly`, `yearly`, and `lookup`. 
-- [`output/`](/outputs): This folder holds the output of the scripts.
+- [`output/`](/output): This folder holds the output of the scripts.
 
 ## Data & Methods
 
@@ -30,9 +30,9 @@ To construct the immigration detention network, we first downloaded detention da
 7. Identifying destinations for each movement and excluding records without a defined movement type.
 
 ### Networks  
-We constructed two distinct networks: a broad [`movement`](/movement_adjacency_matrix.csv) network and a more specific [`transfer`](/transfer_adjacency_matrix.csv) network (weighted directed graphs). The movement network captures any relocation between facilities during a single stay, regardless of reason. The transfer network includes only those moves explicitly classified as transfers. Movements are defined by a sequence of detention book-in dates within one stay—for example, if an individual was initially booked into Alexandria Staging Facility and subsequently booked into Pine Prairie Detention Facility during the same stay, this counts as a movement. If the `Detention Release Reason` for that move was "Transferred," it is classified as a transfer.  Using facility pairs (origin and destination), we created two directed graphs representing facility-to-facility transfers. Each graph includes all 617 detention facilities as nodes, with edges weighted by the frequency of transfers between them. 
+We constructed two distinct networks: a broad [`movement`](/output/movement_adjacency_matrix.csv) network and a more specific [`transfer`](/output/transfer_adjacency_matrix.csv) network (weighted directed graphs). The movement network captures any relocation between facilities during a single stay, regardless of reason. The transfer network includes only those moves explicitly classified as transfers. Movements are defined by a sequence of detention book-in dates within one stay—for example, if an individual was initially booked into Alexandria Staging Facility and subsequently booked into Pine Prairie Detention Facility during the same stay, this counts as a movement. If the `Detention Release Reason` for that move was "Transferred," it is classified as a transfer.  Using facility pairs (origin and destination), we created two directed graphs representing facility-to-facility transfers. Each graph includes all 617 detention facilities as nodes, with edges weighted by the frequency of transfers between them. 
 
-We also similarly created two distinct networks: [`movement`](/movement_adjacency_matrix.csv) and [`transfer`](/transfer_adjacency_matrix.csv), by state, rather than detention facility. We did so by mapping each detention facility to its corresponding state.
+We also similarly created two distinct networks: [`movement`](/output/movement_adjacency_matrix.csv) and [`transfer`](/output/transfer_adjacency_matrix.csv), by state, rather than detention facility. We did so by mapping each detention facility to its corresponding state.
 
 ### Paths  
 Beyond aggregate networks, we mapped the detention pathway of each individual stay. For each stay, we generated a graph tracing their sequence of detention facilities—from the initial facility, through intermediate stops, to the final facility. We created a similar analysis mapping the state pathways.
