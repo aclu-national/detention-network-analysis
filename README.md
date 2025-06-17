@@ -11,11 +11,11 @@ This study applies network analysis methodologies to the examination of detainee
 The immigration detention system comprises a complex network of facilities that hold individuals under custody. Understanding the movement dynamics between these facilities is critical for holding them accountable - particularly as many are forced into a ["Blackhole"](https://www.aclu.org/documents/inside-the-black-hole) of detention. This research leverages network analysis techniques to explore detainee "movements", defined as changes in facility bookings within a single detention episode, and to identify systemic patterns and facility roles.
 
 ## File Structure
-- **[`data_cleaning.R`]("/data_cleaning.R")**: This script cleans the data downloaded from the Deportation Data Project.
-- **[`network_scripts/`](/network_scripts)**: This folder holds `facility_analysis.R` and `state_analysis.R`, both of which conduct network/path analyses of their respective locations.
-- **`location_scripts/`**: This folder holds `location_analysis.R` and `location_scraper.R`. In `location_analysis.R` we use a number of look-up tables creating by the Vera Institute, Marshall Project, TRAC, and others to create a condensed `code_lookup.csv`.
-- **`location_input/`**: This folder holds the data used in `location_analysis.R` in three folders `monthly`, `yearly`, and `lookup`. 
-- **`output/`**: This folder holds the output of the scripts.
+- [`data_cleaning.R`](/data_cleaning.R): This script cleans the data downloaded from the Deportation Data Project.
+- [`network_scripts/`](/network_scripts): This folder holds `facility_analysis.R` and `state_analysis.R`, both of which conduct network/path analyses of their respective locations.
+- [`location_scripts/`](/location_scripts): This folder holds `location_analysis.R` and `location_scraper.R`. In `location_analysis.R` we use a number of look-up tables creating by the Vera Institute, Marshall Project, TRAC, and others to create a condensed `code_lookup.csv`.
+- [`location_inputs/`](/location_inputs): This folder holds the data used in `location_analysis.R` in three folders `monthly`, `yearly`, and `lookup`. 
+- [`output/`](/outputs): This folder holds the output of the scripts.
 
 ## Data & Methods
 
