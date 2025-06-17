@@ -49,7 +49,7 @@ Regarding out-degree (also excluding loops), the detention facilities with the h
 
 Finally, when considering total degree—the sum of in-degree and out-degree—the leading facilities are Alexandria Staging Facility (48,867), Florence Staging Facility (30,080), and Pine Prairie ICE Processing Center (29,083). We observe very similar patterns in the transfer network. Below is a table showing the top 10 detention facilities ranked by degree measures.
 
-|Facility|Transfer In-Degree|Transfer Out-Degree|Transfer Total-Degree|Movement In-Degree|Movement Out-Degree|Movement Total-Degree|
+|Facility|Movement In-Degree|Movement Out-Degree|Movement Total-Degree|Transfer In-Degree|Transfer Out-Degree|Transfer Total-Degree|
 |---|---|---|---|---|---|---|
 |ALEXANDRIA STAGING FACILITY|9030|39836|48866|9031|39836|48867|
 |FLORENCE STAGING FACILITY|18880|11189|30069|18884|11196|30080|
