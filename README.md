@@ -117,6 +117,7 @@ From the analysis, it appears that there are several detention facilities that a
 |JACKSON PARISH CORRECTIONAL CENTER|15421|4.04%|
 
 ## State Analysis
+*note*: our state look-up sheet only contains 4,262 distinct detention facilities, but out of the 617 detention facilities in our dataset, it only contains 472 of these facilities. This means that there are 145 detention facilities that we do not have the state for. We mark these states as "Unknown". Luckily, only 3.40% of all detentions include have unknown states. 
 
 ### Network
 Analyzing the movement network, we find that the states with the highest in-degrees are Louisiana (81,835), Texas (19,071), and Georgia (14,133). We see that Louisiana has, by far, the highest number of detainees transferred to it. The states with the highest out-degrees are Arizona (30,313), Texas (30,175), and California (18,117). The states with the highest total degree are Louisiana (92,700), Texas (49,246), and Arizona (41,019). Below is a table showing the top 10 detention facilities ranked by degree measures.
