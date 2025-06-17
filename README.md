@@ -101,7 +101,7 @@ Looking at the most common subpaths through immigration detention we see that th
 |KROME NORTH SPC->MIAMI STAGING FACILITY->EL VALLE DETENTION FACILITY->FLORENCE STAGING FACILITY->FLORENCE SPC->NW ICE PROCESSING CTR|37|6|
 |PHOENIX DIST OFFICE->FLORENCE STAGING FACILITY->PHOENIX DIST OFFICE->FLORENCE STAGING FACILITY->PHOENIX DIST OFFICE->FLORENCE STAGING FACILITY|37|6|
 
-From the analysis, it appears that there aare several detention facilities that are the stage of transfers. We can ask this more explicitly by looking at the percentage of stays that include at least one stay in the detention facility. Doing this analysis, we can see that 10.10% of all stays include a detention in Alexandria Staging Facility, 7.44% include detention in Florence Staging Facility, and 6.41% include detention in Port Isabel Service Processing Center. You can find more findings below. 
+From the analysis, it appears that there are several detention facilities that are the stage of transfers. We can ask this more explicitly by looking at the percentage of stays that include at least one stay in the detention facility. Doing this analysis, we can see that 10.10% of all stays include a detention in Alexandria Staging Facility, 7.44% include detention in Florence Staging Facility, and 6.41% include detention in Port Isabel Service Processing Center. You can find more findings below. 
 
 | Detention Facility | Stays Count | % of All Stays |
 |---|---|---|
@@ -119,8 +119,76 @@ From the analysis, it appears that there aare several detention facilities that 
 ## State Analysis
 
 ### Network
+Analyzing the movement network, we find that the states with the highest in-degrees are Louisiana (81,835), Texas (19,071), and Georgia (14,133). We see that Louisiana has, by far, the highest number of detainees transferred to it. The states with the highest out-degrees are Arizona (30,313), Texas (30,175), and California (18,117). The states with the highest total degree are Louisiana (92,700), Texas (49,246), and Arizona (41,019). Below is a table showing the top 10 detention facilities ranked by degree measures.
+
+|State|Transfer In-Degree|Transfer Out-Degree|Transfer Total-Degree|Movement In-Degree|Movement Out-Degree|Movement Total-Degree|
+|---|---|---|---|---|---|---|
+|LA|81835|10865|92700|81818|10864|92682|
+|TX|19071|30175|49246|19061|30157|49218|
+|AZ|10706|30313|41019|10706|30312|41018|
+|MS|11672|17488|29160|11672|17488|29160|
+|unknown|8628|14535|23163|8627|14528|23155|
+|CA|3001|18117|21118|2998|18116|21114|
+|GA|14133|6049|20182|14131|6046|20177|
+|FL|5091|4546|9637|5091|4546|9637|
+|NM|2068|4195|6263|2068|4192|6260|
+|NJ|1792|4270|6062|1791|4269|6060|
 
 ### Paths
+We analyze the proportion of initial intake states (the first state in a detainee’s stay), intermediate states (those occupied between the first and last), and final states or release points (the last state in the stay). The results below focus on the ten most represented detention facilities.
+
+| State                 | % Initial | % Intermediate | % Final |
+|---|---|---|---|
+|HI|13.91%|5.22%|80.87%|
+|LA|4.42%|29.55%|66.04%|
+|WA|26.02%|18.07%|55.9%|
+|CO|30.78%|18.22%|50.99%|
+|NV|23.42%|29.18%|47.4%|
+|GA|16.64%|36.82%|46.54%|
+|IL|23.66%|35.32%|41.02%|
+|TX|43.88%|19.63%|36.49%|
+|GU|0%|66.67%|33.33%|
+|NE|12.05%|55.33%|32.62%|
+
+Looking at the most common subpaths through immigration detention we see that the most common subpaths of length 2 are Texas to Texas (65,190), Arizona to Arizona (31,484), and Louisiana to Louisiana (28,246). The most common subpaths of length 2 between different states are Texas to Louisiana (20,531), Arizona to Louisiana (13,573), and Mississipi to Louisana (11,140). Below are the most common paths by subpath length (including between the same state).
+
+|Subpaths| Count | Subpath Length |
+|---|---|---|
+|TX->TX->TX|14652|3|
+|FL->FL->FL|13172|3|
+|AZ->AZ->AZ|11839|3|
+|TX->TX->LA|7871|3|
+|TX->LA->LA|4181|3|
+|FL->FL->FL->FL|5976|4|
+|AZ->AZ->AZ->AZ|5229|4|
+|TX->TX->TX->TX|3942|4|
+|TX->TX->TX->LA|2281|4|
+|FL->FL->FL->LA|1874|4|
+|FL->FL->FL->FL->FL|2572|5|
+|AZ->AZ->AZ->AZ->AZ|2188|5|
+|TX->TX->TX->TX->TX|1197|5|
+|FL->FL->FL->FL->LA|941|5|
+|FL->FL->FL->LA->LA|713|5|
+|FL->FL->FL->FL->FL->FL|1131|6|
+|AZ->AZ->AZ->AZ->AZ->AZ|904|6|
+|FL->FL->FL->FL->FL->LA|379|6|
+|FL->FL->FL->FL->LA->LA|362|6|
+|TX->TX->TX->TX->TX->TX|197|6|
+
+Looking at the percentage of stays that include at least one stay in the state, we can see that 43.49% of stays included detention in Texas, 25.31% stays included detention in Louisiana, and 15.55% stays included detention in Arizona. You can find more findings below. 
+
+| Detention Facility | Stays Count | % of All Stays |
+|---|---|---|
+|TX|166085|43.49%|
+|LA|96682|25.32%|
+|AZ|59397|15.55%|
+|CA|41474|10.86%|
+|unknown|24681|6.46%|
+|GA|20814|5.45%|
+|NM|20563|5.38%|
+|MS|19908|5.21%|
+|FL|18843|4.93%|
+|NY|10313|2.7%|
 
 ## Further Analysis Necessary
 - [ ] Analysis of loops.
